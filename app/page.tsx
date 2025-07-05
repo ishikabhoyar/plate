@@ -29,12 +29,7 @@ function LeetCodeContent() {
       {/* Header */}
       <header className="border-b px-4 py-2 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <h1 className="text-xl font-bold">LeetCode</h1>
-          <nav className="flex items-center gap-4 text-sm">
-            <span className="text-muted-foreground">Problems</span>
-            <span className="text-muted-foreground">Contest</span>
-            <span className="text-muted-foreground">Discuss</span>
-          </nav>
+          <h1 className="text-xl font-bold">OnScreen Test</h1>
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
@@ -43,7 +38,6 @@ function LeetCodeContent() {
           <Button variant="outline" size="sm">
             Sign In
           </Button>
-          <Button size="sm">Premium</Button>
         </div>
       </header>
 
