@@ -8,6 +8,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/componen
 import { Play, Send, ThumbsUp, ThumbsDown, MessageCircle, Bookmark, Moon, Sun } from "lucide-react"
 import { PlateEditor } from "@/components/plate-editor"
 import { CodeEditor } from "@/components/code-editor"
+import { VSCodeTerminal } from "@/components/vscode-terminal"
 import { ThemeProvider } from "@/components/theme-provider"
 import { useTheme } from "next-themes"
 
@@ -172,36 +173,9 @@ function LeetCodeContent() {
                 <CodeEditor />
               </div>
 
-              {/* Test Cases */}
-              <div className="border-t">
-                <Tabs defaultValue="testcase" className="w-full">
-                  <TabsList className="grid w-full grid-cols-3">
-                    <TabsTrigger value="testcase">Testcase</TabsTrigger>
-                    <TabsTrigger value="result">Test Result</TabsTrigger>
-                    <TabsTrigger value="console">Console</TabsTrigger>
-                  </TabsList>
-                  <TabsContent value="testcase" className="p-4">
-                    <div className="space-y-2">
-                      <div className="text-sm font-medium">Case 1</div>
-                      <div className="bg-muted p-2 rounded text-sm font-mono">
-                        <div>nums = [2,7,11,15]</div>
-                        <div>target = 9</div>
-                      </div>
-                      <div className="text-sm text-muted-foreground">Expected: [0,1]</div>
-                    </div>
-                  </TabsContent>
-                  <TabsContent value="result" className="p-4">
-                    <div className="text-center text-muted-foreground py-4">
-                      <Play className="w-8 h-8 mx-auto mb-2 opacity-50" />
-                      <p>Run your code to see results</p>
-                    </div>
-                  </TabsContent>
-                  <TabsContent value="console" className="p-4">
-                    <div className="bg-slate-900 dark:bg-slate-950 text-green-400 p-3 rounded font-mono text-sm min-h-[100px]">
-                      <div className="opacity-50">Console output will appear here...</div>
-                    </div>
-                  </TabsContent>
-                </Tabs>
+              {/* VS Code Terminal */}
+              <div className="border-t h-64">
+                <VSCodeTerminal />
               </div>
             </div>
           </ResizablePanel>
