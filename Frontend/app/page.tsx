@@ -29,7 +29,7 @@ function LeetCodeContent() {
       {/* Header */}
       <header className="border-b px-4 py-2 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <h1 className="text-xl font-bold">OnScreen Test</h1>
+          <h1 className="text-2xl font-bold">OnScreen Test</h1>
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
