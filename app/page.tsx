@@ -48,60 +48,18 @@ function LeetCodeContent() {
           <ResizablePanel defaultSize={45} minSize={30}>
             <div className="h-full flex flex-col">
               {/* Problem Header */}
-              <div className="p-4 border-b">
+              <div className="p-3 border-b">
                 <div className="flex items-center justify-between mb-2">
                   <h2 className="text-lg font-semibold">1. Two Sum</h2>
-                  <div className="flex items-center gap-2">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setLiked(!liked)}
-                      className={liked ? "text-green-600" : ""}
-                    >
-                      <ThumbsUp className="w-4 h-4 mr-1" />
-                      1.2k
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setDisliked(!disliked)}
-                      className={disliked ? "text-red-600" : ""}
-                    >
-                      <ThumbsDown className="w-4 h-4 mr-1" />
-                      89
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setBookmarked(!bookmarked)}
-                      className={bookmarked ? "text-yellow-600" : ""}
-                    >
-                      <Bookmark className="w-4 h-4" />
-                    </Button>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge
-                    variant="secondary"
-                    className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-                  >
-                    Easy
-                  </Badge>
-                  <Badge variant="outline">Array</Badge>
-                  <Badge variant="outline">Hash Table</Badge>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Acceptance Rate: 49.1% | Submissions: 8.2M | Accepted: 4.0M
                 </div>
               </div>
 
               {/* Tabs */}
               <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 flex flex-col">
-                <TabsList className="grid w-full grid-cols-4 mx-4 mt-4">
-                  <TabsTrigger value="description">Description</TabsTrigger>
-                  <TabsTrigger value="editorial">Editorial</TabsTrigger>
-                  <TabsTrigger value="solutions">Solutions</TabsTrigger>
-                  <TabsTrigger value="submissions">Submissions</TabsTrigger>
+                <TabsList className="grid grid-cols-3 mx-4 mt-4">
+                  <TabsTrigger value="description">Q.1</TabsTrigger>
+                  <TabsTrigger value="editorial">Q.2</TabsTrigger>
+                  <TabsTrigger value="solutions">Q.3</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="description" className="flex-1 overflow-auto p-4">
